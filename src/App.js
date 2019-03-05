@@ -343,14 +343,13 @@ class App extends Component {
       <div className='App'>
       <div className='App-header'>
         <div className='App-header-rotation'>
-          <h1 className='App-header-title'>David Paliwoda?</h1>
+          <h1 className='App-header-title'>David Paliwoda</h1>
           <div className='App-header-contact'>
             <CopyToClipboard
               onCopy={this.onCopy}
               text={'davidpaliwoda@gmail.com'}>
               <a className={`App-header-contact-link is-email ${ this.state.copied ? 'is-copied' : '' }`} href='#' onClick={ this.onCopyClick.bind(this) }>davidpaliwoda@gmail.com</a>
             </CopyToClipboard>
-            <a className='App-header-contact-link' href='http://twitter.com/davepaliwoda' target='_blank'>twitter</a>
           </div>
         </div>
       </div>

@@ -94,6 +94,12 @@ h3, p, a {
   line-height:1em;
   //margin-bottom:1em;
 }
+.App-header-title:after {
+  content: '?';
+}
+.App-header-title:hover:after {
+  content: '!';
+}
 .App-header-description {
 
 }
