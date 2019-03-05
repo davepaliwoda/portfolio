@@ -1,0 +1,20 @@
+
+DONE:
+-Fix weird bottom of page on Safari/mobile
+-Horizontal scroll fix
+-Videos
+-Confetti performance
+-Articles
+-Linking
+-Links on client logos
+-G.A.
+-Filtering
+
+To do on website:
+-Private version
+-Load in animation
+-Filter animation
+-Confetti reactive to mouse
+-Recreating old prototypes/motion, esp. samsung
+-Add Raet to private projects
+-Videos of prototypes to go on private site

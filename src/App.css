@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400|Poppins:700');
+
+.App {
+  text-align: center;
+  color:rgba(10,10,40,1);
+  font-family: 'Poppins',sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Poppins',sans-serif;
+}
+h3, p, a {
+  font-family: 'Rubik', sans-serif;
+  font-weight: lighter;
+}
+* {
+  padding:0;
+  margin:0;
+}
+
+#canvas {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:-1;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.App-header {
+  box-sizing: border-box;
+  padding: 20px;
+  display:inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align:left;
+
+  width:calc(100vw - 20px);
+  max-width:960px;
+  height: 75vh;
+
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 35% 75%, rgba(255,255,255,0) 100%);
+
+}
+.App-header-title {
+  font-size:6em;
+  line-height:1em;
+  margin-bottom:.5em;
+}
+.App-header-subtitle {
+  font-size:2em;
+  width:80vw;
+  max-width:24em;
+  line-height:1.2em;
+  font-weight:400;
+}
+.App-header-description {
+
+}
+.App-header-contact {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 30px 0 0 0;
+}
+.App-header-contact-link {
+  font-size:1.5em;
+  margin: 0 10px 0 0;
+  color: rgb(80,80,220);
+  font-weight:bold;
+}
+.App-filters {
+  width:100%;
+  display:inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width:960px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.App-filters-filter-name {
+  color:white;
+
+  text-transform: uppercase;
+}
+.App-filters-filter {
+  width:15%;
+  margin: 0 10px;
+  padding: 15px;
+  border-radius:40px;
+  cursor:pointer;
+  min-width:140px;
+  margin-bottom:20px;
+  opacity:.5;
+  transition: all .12s ease-in-out;
+}
+.App-filters-filter.is-active {
+  opacity:1;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.App-content {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+
+}
+.App-content-module {
+  text-align:center;
+  border-radius:5px;
+  box-sizing: border-box;
+  margin-bottom:40px;
+  padding: 20px;
+  position:relative;
+  display:block;
+  width: 100%;
+  max-width:960px;
+  color:white;
+  text-decoration: none;
+  background: linear-gradient(to bottom right, #2586fa 0%,#1acbfc 100%);
+  opacity:.95;
+  /*box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);*/
+}
+.App-content-module:hover .App-content-module-body-title span {
+  text-decoration:underline;
+}
+
+.is-work {
+  background: linear-gradient(to bottom right, #2586fa 0%,#1acbfc 100%);
+}
+.is-project {
+  background: linear-gradient(to bottom right, #fc4a1a 0%,#fa9925 100%);
+}
+.is-education {
+  background: linear-gradient(to bottom right, #4b1afc 0%,#9925fa 100%);
+}
+.is-side {
+  background: linear-gradient(to bottom right, #fa253c 0%,#fc1a7d 100%);
+}
+.is-writing {
+  background: linear-gradient(to bottom right, #fa253c 0%,#fc1a7d 100%);
+}
+
+.App-content-module-header {
+  margin: 0 0 10px 0;
+}
+.App-content-module-header-label {
+  text-align:left;
+  text-transform:uppercase;
+  opacity:.75;
+}
+
+.App-content-module-body {
+  text-align:left;
+}
+.App-content-module-body-title {
+  font-size:2.5em;
+  font-weight:bolder;
+  line-height:1.2em;
+}
+.App-content-module-body-subtitle {
+  font-size:2em;
+  margin: 5px 0 5px 0;
+  line-height:1.2em;
+}
+.App-content-module-body-date {
+  font-size:.9em;
+  margin: 0 0 20px 0;
+}
+.App-content-module-body-description {
+  font-size: 1.5em;
+  line-height:1.4em;
+  letter-spacing: 0.02em;
+}
+.App-content-module-video {
+  display:inline-block;
+  margin-top:40px;
+  width:100%;
+}
+
+.App-content-module-thumbs {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top:60px;
+}
+.App-content-module-thumbs img, .App-content-module-thumbs a {
+  width:20%;
+  min-width:160px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 750px) {
+  .App-header {
+    height: auto;
+    margin-bottom: 10vw;
+  }
+  .App-filters-filter {
+    width:40%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .App-header-title {
+    font-size: 14vw;
+  }
+  .App-header-subtitle {
+    font-size:7vw;
+  }
+  .App-content-module-body-title {
+    font-size:9vw;
+  }
+}
+
+
+@media screen and (max-width: 520px) {
+  .App-filters-filter {
+    width:100%;
+    padding: 10px;
+    margin-bottom:5px;
+  }
+}
+
+.vimeo-video iframe {
+  width:100%;
+  height:50vh;
+}
