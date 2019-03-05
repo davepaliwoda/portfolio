@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import ReactPlayer from 'react-player';
 import './App.css';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 
 import BBC from './images/BBC.png';
@@ -12,12 +13,9 @@ import Okko from './images/Okko.png';
 import Oncue from './images/Oncue.png';
 import RedBull from './images/RedBull.png';
 import Samsung from './images/Samsung.png';
-import Shazam from './images/Shazam.png';
 import Skype from './images/Skype.png';
-import Tivo from './images/Tivo.png';
 import Verizon from './images/Verizon.png';
 import Vevo from './images/Vevo.png';
-import Vodafone from './images/Vodafone.png';
 
 class App extends Component {
   constructor(props) {
@@ -326,18 +324,36 @@ class App extends Component {
       </div>
     );
   }
+  onCopy() {
+
+  }
+  onCopyClick() {
+    this.setState({
+      copied: true
+    });
+    setTimeout(()=>{
+      this.setState({
+        copied: false
+      });
+    },1000);
+    return false;
+  }
   render() {
     return (
       <div className='App'>
-        <div className='App-header'>
-          <h1 className='App-header-title'>David Paliwoda</h1>
-          <h3 className='App-header-subtitle'>Digital product designer with 6 years experience and a keen interest in motion and prototyping. Contact me for access to extended portfolio.</h3>
+      <div className='App-header'>
+        <div className='App-header-rotation'>
+          <h1 className='App-header-title'>David Paliwoda?</h1>
           <div className='App-header-contact'>
-            <a className='App-header-contact-link' href='mailto:davidpaliwoda@gmail.com' target='_blank'>Email</a>
-            <a className='App-header-contact-link' href='http://twitter.com/davepaliwoda' target='_blank'>Twitter</a>
-            <a className='App-header-contact-link' href='https://www.linkedin.com/in/davidpaliwoda' target='_blank'>LinkedIn</a>
+            <CopyToClipboard
+              onCopy={this.onCopy}
+              text={'davidpaliwoda@gmail.com'}>
+              <a className={`App-header-contact-link is-email ${ this.state.copied ? 'is-copied' : '' }`} href='#' onClick={ this.onCopyClick.bind(this) }>davidpaliwoda@gmail.com</a>
+            </CopyToClipboard>
+            <a className='App-header-contact-link' href='http://twitter.com/davepaliwoda' target='_blank'>twitter</a>
           </div>
         </div>
+      </div>
         { this.getFilters() }
         { this.getAppModules() }
       </div>

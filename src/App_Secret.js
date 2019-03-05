@@ -286,15 +286,13 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='App-header'>
-          <h1 className='App-header-title'>David Paliwoda</h1>
-          <h3 className='App-header-subtitle'>Digital product designer with 5 years experience and an interest in motion and prototyping. Contact me for access to extended portfolio.</h3>
+          <h1 className='App-header-title'>David Paliwoda?</h1>
           <div className='App-header-contact'>
-            <a className='App-header-contact-link' href='mailto:davidpaliwoda@gmail.com' target='_blank'>Email</a>
+            <a className='App-header-contact-link' href='mailto:davidpaliwoda@gmail.com' target='_blank'>davidpaliwoda@gmail.com</a>
             <a className='App-header-contact-link' href='http://twitter.com/davepaliwoda' target='_blank'>Twitter</a>
             <a className='App-header-contact-link' href='https://www.linkedin.com/in/davidpaliwoda' target='_blank'>LinkedIn</a>
           </div>
         </div>
-        {/* this.getFilters() */}
         { this.getAppModules() }
       </div>
     );

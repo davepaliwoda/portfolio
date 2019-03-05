@@ -1,17 +1,61 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,400|Poppins:700');
+/*@import url('https://fonts.googleapis.com/css?family=Rubik:300,400|Poppins:700');*/
+
+@font-face {
+  font-family: 'ISO';
+  font-weight: 200;
+  font-style: normal;
+  src: url('./fonts/ISOv0.5-Thin.eot'),
+       url('./fonts/ISOv0.5-Thin.woff');
+}
+@font-face {
+  font-family: 'ISO';
+  font-weight: 300;
+  font-style: normal;
+  src: url('./fonts/ISOv0.5-Light.eot'),
+       url('./fonts/ISOv0.5-Light.woff');
+}
+@font-face {
+  font-family: 'ISO';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./fonts/ISOv0.5-Regular.eot'),
+       url('./fonts/ISOv0.5-Regular.woff');
+}
+@font-face {
+  font-family: 'ISO';
+  font-weight: 500;
+  font-style: normal;
+  src: url('./fonts/ISOv0.5-Medium.eot'),
+       url('./fonts/ISOv0.5-Medium.woff');
+}
+@font-face {
+  font-family: 'ISO';
+  font-weight: 600;
+  font-style: normal;
+  src: url('./fonts/ISOv0.5-Bold.eot'),
+       url('./fonts/ISOv0.5-Bold.woff');
+}
+@font-face {
+  font-family: 'ISO';
+  font-weight: 700;
+  font-style: normal;
+  src: url('./fonts/ISOv0.5-Black.eot'),
+       url('./fonts/ISOv0.5-Black.woff');
+}
+
 
 .App {
   text-align: center;
   color:rgba(10,10,40,1);
-  font-family: 'Poppins',sans-serif;
+  font-family: 'ISO',sans-serif;
 }
 
 h1, h2 {
-  font-family: 'Poppins',sans-serif;
+  font-family: 'ISO',sans-serif;
 }
 h3, p, a {
-  font-family: 'Rubik', sans-serif;
-  font-weight: lighter;
+  font-family: 'ISO', sans-serif;
+  font-weight: 300;
 }
 * {
   padding:0;
@@ -41,21 +85,14 @@ h3, p, a {
   width:calc(100vw - 20px);
   max-width:960px;
   height: 75vh;
-
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 35% 75%, rgba(255,255,255,0) 100%);
-
+}
+.App-header-rotation {
+  transform:rotate(-10deg);
 }
 .App-header-title {
   font-size:6em;
   line-height:1em;
-  margin-bottom:.5em;
-}
-.App-header-subtitle {
-  font-size:2em;
-  width:80vw;
-  max-width:24em;
-  line-height:1.2em;
-  font-weight:400;
+  //margin-bottom:1em;
 }
 .App-header-description {
 
@@ -65,13 +102,22 @@ h3, p, a {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 30px 0 0 0;
+  margin: 20px 0 0 10px;
 }
 .App-header-contact-link {
   font-size:1.5em;
   margin: 0 10px 0 0;
   color: rgb(80,80,220);
-  font-weight:bold;
+  font-weight:400;
+
+}
+.App-header-contact-link.is-email:hover::after {
+  content: ' copy';
+  opacity:0.3;
+}
+.App-header-contact-link.is-copied:hover::after {
+  content: ' copied!';
+  opacity:0.3;
 }
 .App-filters {
   width:100%;
@@ -128,7 +174,7 @@ h3, p, a {
   position:relative;
   display:block;
   width: 100%;
-  max-width:960px;
+  max-width:840px;
   color:white;
   text-decoration: none;
   background: linear-gradient(to bottom right, #2586fa 0%,#1acbfc 100%);
@@ -169,7 +215,7 @@ h3, p, a {
 }
 .App-content-module-body-title {
   font-size:2.5em;
-  font-weight:bolder;
+  font-weight:600;
   line-height:1.2em;
 }
 .App-content-module-body-subtitle {
@@ -184,7 +230,6 @@ h3, p, a {
 .App-content-module-body-description {
   font-size: 1.5em;
   line-height:1.4em;
-  letter-spacing: 0.02em;
 }
 .App-content-module-video {
   display:inline-block;
