@@ -46,7 +46,15 @@ class App extends Component {
           subTitle:'Designer',
           date:'Oct 2017 - Current',
           url: 'https://www.snap.com/en-US/',
-          description: "Building great experiences for publishers and internal teams."
+          description: "Developing the publishing platform and creation tools for Snapchat's Discover Feed."
+        },
+        {
+          type:'writing',
+          title:'Interview with JAM Conference',
+          subTitle:'Moving from agency to in-house',
+          date:'Feb 2019',
+          url: 'https://www.jamlondon.io/interviews/behind-the-product:-my-design-journey-from-agency-world-to-in-house',
+          description: `The kind folks at JAM asked me about my career so far, experiences moving from agencies to big tech and how I approach my personal projects.`
         },
         {
           type:'work',
